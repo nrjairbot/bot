@@ -212,11 +212,13 @@ if(document.getElementsByTagName("form").length > 0 && document.getElementsByTag
 chrome.storage.sync.get(['number'], function(items) {
   if(document.getElementById("mobile") != null){
     if(items.number){
-        let appendScript = document.createElement("script");
-        document.body.appendChild(appendScript);
-        appendScript.innerHTML = "captchaValid = true;";
-        document.getElementById("mobile").value = items.number
-        document.getElementById("go").click()
+      var actualCode = "captchaValid = true;"
+      var script = document.createElement('script');
+      script.textContent = actualCode;
+      (document.head||document.documentElement).appendChild(script); 
+      script.remove(); 
+      document.getElementById("mobile").value = items.number
+      document.getElementById("go").click()
     }else{
         alert("please set a number!")
     } 
