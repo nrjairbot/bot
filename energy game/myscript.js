@@ -1,4 +1,4 @@
-﻿
+var tel = '0790000000';
 var array = [
 {"name": "Welcher dieser Acts Stand schon auf der Stade de Suisse Bühne?", "number": 2},
 {"name": "Welcher DJ stand noch nie auf der Energy Air Bühne?", "number":2},
@@ -51,7 +51,7 @@ var array = [
 ]
 
 if(document.getElementById("mobile") != null){
-    document.getElementById("mobile").value = "0790000000" //Replace with own number
+    document.getElementById("mobile").value = tel //Replace with own number
 }
 if(document.getElementsByClassName("round-button-circle").length > 0){
 if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
