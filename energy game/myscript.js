@@ -244,8 +244,6 @@ if(document.getElementsByTagName("h2")[1] !== undefined && document.getElementsB
 }
 
 // Teilwis verkackts dr Bot iwie (kp wiso), de muesme neustarte klicke. Hie de Teil outomatisiert
-if(document.getElementsByTagName("button").length > 0) {
-  if(document.getElementsByTagName("button")[0].innerHTML.trim() == "neu starten".trim()){
-    document.getElementsByTagName("button")[0].click();
-  }
+if(document.getElementsByTagName("button").length > 0 && document.getElementsByTagName("button")[0].innerHTML == "neu starten") {
+  document.getElementsByTagName("button")[0].click();
 }
