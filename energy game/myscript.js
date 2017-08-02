@@ -209,35 +209,36 @@ if(document.getElementsByTagName("form").length > 0 && document.getElementsByTag
   }
 }
 
-chrome.storage.sync.get(['number'], function(items) {
-  if(document.getElementById("mobile") != null){
-    if(items.number){
-      var actualCode = "captchaValid = true;"
-      var script = document.createElement('script');
-      script.textContent = actualCode;
-      (document.head||document.documentElement).appendChild(script); 
-      script.remove(); 
-      document.getElementById("mobile").value = items.number
-      document.getElementById("go").click()
-    }else{
-        alert("please set a number!")
-    } 
-  }
-})
-
-if(document.getElementsByTagName("h2")[1] !== undefined && document.getElementsByTagName("h2")[1] !== "Glückwunsch!"){
-  if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
-    document.getElementsByClassName("round-button-circle")[0].click()
-  }
-}
-
 if(document.getElementsByTagName("h1").length > 0){
   switch (document.getElementsByTagName("h1")[0].innerHTML) {
+    case "GEWINNE JETZT TICKETS MIT DEM ENERGY AIR GAME":
+      chrome.storage.sync.get(['number'], function(items) {
+        if(document.getElementById("mobile") != null){
+          if(items.number){
+            var actualCode = "captchaValid = true;"
+            var script = document.createElement('script');
+            script.textContent = actualCode;
+            (document.head||document.documentElement).appendChild(script); 
+            script.remove(); 
+            document.getElementById("mobile").value = items.number
+            document.getElementById("go").click()
+          }else{
+              alert("please set a number!")
+          } 
+        }
+      })
+      break;
     case "Hinter welchem Energy Air Logo versteckt sich das Ticket?":
       window.location.href = "?ticket=0";
       break;
     case "Das war das falsche Logo, knapp daneben! Versuche es erneut!":
       document.getElementsByTagName("Button")[0].click()
       break;
+  }
+}
+
+if(document.getElementsByTagName("h2")[1] !== undefined && document.getElementsByTagName("h2")[1] !== "Glückwunsch!"){
+  if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
+    document.getElementsByClassName("round-button-circle")[0].click()
   }
 }
