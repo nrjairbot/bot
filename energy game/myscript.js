@@ -51,7 +51,7 @@ var array = [
 ]
 
 if(document.getElementById("mobile") != null){
-    document.getElementById("mobile").value = "0798817500" //Replace with own number
+    document.getElementById("mobile").value = "0790000000" //Replace with own number
 }
 if(document.getElementsByClassName("round-button-circle").length > 0){
 if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
