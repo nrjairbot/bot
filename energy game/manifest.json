@@ -17,7 +17,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://game.energy.ch/*"],
+      "matches": ["http://game.energy.ch/*","https://game.energy.ch/*"],
       "js": ["myscript.js"]
     }
   ]
