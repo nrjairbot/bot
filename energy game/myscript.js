@@ -242,3 +242,10 @@ if(document.getElementsByTagName("h2")[1] !== undefined && document.getElementsB
     document.getElementsByClassName("round-button-circle")[0].click()
   }
 }
+
+// Teilwis verkackts dr Bot iwie (kp wiso), de muesme neustarte klicke. Hie de Teil outomatisiert
+if(document.getElementsByTagName("button").length > 0) {
+	if(document.getElementsByTagName("button")[0].innerHTML.trim() == "neu starten".trim()){
+		document.getElementsByTagName("button")[0].click();
+	}
+}
