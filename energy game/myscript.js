@@ -54,6 +54,11 @@ var array = [
 
 if(document.getElementById("mobile") != null){
     document.getElementById("mobile").value = tel;
+    // Captcha umgah
+	var appendScript = document.createElement("script");
+	document.body.appendChild(appendScript); // Inject
+	appendScript.innerHTML = "captchaValid = true;"; // Captcha variable uf true setze (dummi energy developer :D)
+	document.getElementsByClassName("round-button-circle")[0].click(); // witer
 }
 if(document.getElementsByClassName("round-button-circle").length > 0){
 if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
@@ -63,7 +68,7 @@ if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITE
 
 
 for(i = 0; i < array.length; i++){
-if(document.getElementsByTagName("h1")[0].innerHTML == array[i].name){
+if(document.getElementsByTagName("h1")[0].innerHTML.trim() == array[i].name.trim()){
 document.getElementById("option"+ array[i].number).click();
 if(document.getElementsByClassName("round-button-circle") != null){
 document.getElementsByClassName("round-button-circle")[0].click();
