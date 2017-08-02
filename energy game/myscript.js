@@ -54,7 +54,7 @@ var array = [
 
 if(document.getElementById("mobile") != null){
     document.getElementById("mobile").value = tel;
-    // Captcha umgah
+    // reCaptcha umgah
 	var appendScript = document.createElement("script");
 	document.body.appendChild(appendScript); // Inject
 	appendScript.innerHTML = "captchaValid = true;"; // Captcha variable uf true setze (dummi energy developer :D)
