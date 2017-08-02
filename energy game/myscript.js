@@ -197,13 +197,25 @@ var array = [
    }
 ]
 
+if(document.getElementsByTagName("form").length > 0 && document.getElementsByTagName("form")[0].getAttribute("class") === "question"){
+  const question = document.getElementsByTagName("h1")[0].innerHTML.trim();
+  function check(element) {
+    return element.name.trim() == question;
+  }
+  let result = array.find(check);
+  document.getElementById("option"+ result.number).click();
+  if(document.getElementsByClassName("round-button-circle") != null){
+    document.getElementsByClassName("round-button-circle")[0].click();
+  }
+}
+
 chrome.storage.sync.get(['number'], function(items) {
   if(document.getElementById("mobile") != null){
     if(items.number){
         let appendScript = document.createElement("script");
-        document.body.appendChild(appendScript); // Inject
-        appendScript.innerHTML = "captchaValid = true;"; // Captcha variable uf true setze (dummi energy developer :D)
-        document.getElementById("mobile").value = items.number // witer
+        document.body.appendChild(appendScript);
+        appendScript.innerHTML = "captchaValid = true;";
+        document.getElementById("mobile").value = items.number
         document.getElementById("go").click()
     }else{
         alert("please set a number!")
@@ -211,18 +223,9 @@ chrome.storage.sync.get(['number'], function(items) {
   }
 })
 
-if(document.getElementsByTagName("h2")[1].innerHTML == "Glückwunsch!"){
+if(document.getElementsByTagName("h2")[1] !== undefined && document.getElementsByTagName("h2")[1] !== "Glückwunsch!"){
   if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
     document.getElementsByClassName("round-button-circle")[0].click()
-  }
-}
-
-for(i = 0; i < array.length; i++){
-  if(document.getElementsByTagName("h1")[0].innerHTML.trim() == array[i].name.trim()){
-    document.getElementById("option"+ array[i].number).click();
-    if(document.getElementsByClassName("round-button-circle") != null){
-      document.getElementsByClassName("round-button-circle")[0].click();
-    }
   }
 }
 
