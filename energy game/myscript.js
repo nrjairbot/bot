@@ -204,7 +204,7 @@ if(document.getElementsByTagName("form").length > 0 && document.getElementsByTag
   }
   let result = array.find(check);
   document.getElementById("option"+ result.number).click();
-  if(document.getElementsByClassName("round-button-circle") != null){
+  if(document.getElementsByClassName("round-button-circle") !== null){
     document.getElementsByClassName("round-button-circle")[0].click();
   }
 }
@@ -238,12 +238,12 @@ if(document.getElementsByTagName("h1").length > 0){
 }
 
 if(document.getElementsByTagName("h2")[1] !== undefined && document.getElementsByTagName("h2")[1] !== "Glückwunsch!"){
-  if(document.getElementsByClassName("round-button-circle")[0].innerHTML == "WEITER GEHTS!"){
+  if(document.getElementsByClassName("round-button-circle")[0].innerHTML === "WEITER GEHTS!"){
     document.getElementsByClassName("round-button-circle")[0].click()
   }
 }
 
 // Teilwis verkackts dr Bot iwie (kp wiso), de muesme neustarte klicke. Hie de Teil outomatisiert
-if(document.getElementsByTagName("button").length > 0 && document.getElementsByTagName("button")[0].innerHTML == "neu starten") {
+if(document.getElementsByTagName("button").length > 0 && document.getElementsByTagName("button")[0].innerHTML === "neu starten") {
   document.getElementsByTagName("button")[0].click();
 }
