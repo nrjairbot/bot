@@ -10,7 +10,7 @@ var array = [
    {
       "name":"Ab wann darf man, ohne eine erwachsene Begleitperson, am Energy Air teilnehmen?",
       "number":3
-   ,
+   },
    {  
       "name":"Welcher dieser Acts Stand schon auf der Stade de Suisse Bühne?",
       "number":2
