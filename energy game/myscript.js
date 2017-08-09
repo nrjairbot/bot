@@ -3,6 +3,10 @@ var array = [
       "name":"Welcher dieser Acts Stand schon auf der Stade de Suisse Bühne?",
       "number":2
    },
+   {
+      "name":"Von welchem ehemaligen Energy Air Act ist der Song «Bilder im Kopf»?",
+      "number":1
+   },
    {  
       "name":"Welcher DJ stand noch nie auf der Energy Air Bühne?",
       "number":2
