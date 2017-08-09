@@ -2,15 +2,15 @@ var array = [
    {
       "name":"Wie hiess die Energy Air Hymne 2015?",
       "number":1
-   }
+   },
    {
       "name":"Welcher Künstler stand NOCH NIE auf der Energy Air Bühne?",
       "number":1
-   }
+   },
    {
       "name":"Ab wann darf man, ohne eine erwachsene Begleitperson, am Energy Air teilnehmen?",
       "number":3
-   }
+   ,
    {  
       "name":"Welcher dieser Acts Stand schon auf der Stade de Suisse Bühne?",
       "number":2
