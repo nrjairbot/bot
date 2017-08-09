@@ -184,7 +184,7 @@ var array = [
       "number":1
    },
    {  
-      "name":"Wie viele Male standen Dabu Fantastic bereits auf der Enrgy Air Bühne?",
+      "name":"Wie viele Male standen Dabu Fantastic bereits auf der Energy Air Bühne?",
       "number":1
    },
    {  
