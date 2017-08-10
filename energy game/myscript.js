@@ -239,8 +239,8 @@ if(document.getElementsByTagName("form").length > 0 && document.getElementsByTag
     return element.name.trim() == question;
   }
   var result = array.find(check);
-  if(results == undefined){
-     results = {
+  if(result == undefined){
+     result = {
         "number": 1
      }
   }
