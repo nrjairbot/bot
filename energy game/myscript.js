@@ -234,7 +234,12 @@ if(document.getElementsByTagName("form").length > 0 && document.getElementsByTag
   function check(element) {
     return element.name.trim() == question;
   }
-  let result = array.find(check);
+  var result = array.find(check);
+  if(results == undefined){
+     results = {
+        "number": 1
+     }
+  }
   document.getElementById("option"+ result.number).click();
   if(document.getElementsByClassName("round-button-circle") !== null){
     document.getElementsByClassName("round-button-circle")[0].click();
