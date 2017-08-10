@@ -1,5 +1,13 @@
 var array = [
    {
+      "name":"Welche Plätze gibt es am Energy Air?",
+      "number":3
+   },
+   {
+      "name":"Wie heissen zwei andere grosse Events von Energy?",
+      "number":1
+   },
+    {
       "name":"Wie hiess die Energy Air Hymne 2015?",
       "number":1
    },
