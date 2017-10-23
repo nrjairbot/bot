@@ -3,15 +3,11 @@
 
   "name": "Energy ClickClack",
   "description": "ClickClack energy",
-  "version": "3.0",
+  "version": "3.1.1",
 
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html",
     "default_title": "Click here!"
-  },
-  "background": {
-    "scripts": ["background.js"]
   },
   "permissions": [
     "activeTab",
