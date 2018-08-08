@@ -185,7 +185,7 @@ var array = [
     answer: 'Dimitri Vegas & Like Mike'
   }
 ];
-var intervalID = window.setInterval(checkWeatherAPI, 1000);
+var intervalID = window.setInterval(checkWeatherAPI, 100);
 
 function checkWeatherAPI() {
   // go check API
@@ -216,9 +216,7 @@ function checkWeatherAPI() {
         if (document.getElementsByTagName('h3')[1].innerText == array[i].name) {
           document.getElementById(array[i].answer).click();
           document.getElementById('next-question').click();
-          console.log(true);
         } else {
-          console.log(false);
         }
       }
     }
