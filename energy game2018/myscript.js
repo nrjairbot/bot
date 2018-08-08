@@ -96,6 +96,7 @@ var array = [
     name: 'Wie viele Energy Air Tickets werden verlost?',
     answer: '40’000'
   },
+  {
     name: 'Wann beginnt das Energy Air 2018?',
     answer: 'Um 17 Uhr'
   },
@@ -150,15 +151,37 @@ var array = [
   {
     name: 'Wer spielt die Mutter von Cyril?',
     answer: 'Anke Engelke'
+  },
+  {
+    name: 'Auf welchem Weg kann man KEINE Energy Air Tickets gewinnen?',
+    answer: 'E-Mail'
+  },
+  {
+    name: 'Wie breit ist die Energy Air Bühne?',
+    answer: '70 Meter'
+  },
+  {
+    name: 'Wie viele Spotlights gibt es am Energy Air?',
+    answer: '250'
+  },
+  {
+    name: 'Welcher Act stand beim ersten Energy Air 2014 und auch im letzten Jahr auf der Bühne?',
+    answer: 'Pegasus'
+  },
+  {
+    name: 'Was verlangte Nena am Energy Air 2016?',
+    answer: 'Fünf Kilo Schweizer Schoggi in der Garderobe'
+  },
+  {
+    name: 'Welche Farbe haben die Haare des Social Media Stars Julia Beautx im Film?',
+    answer: 'Blond'
   }
 ];
-function getAnswer() {
-  // if (document.getElementsByTagName('button')[5].innerHTML === 'Neustart') {
-  //   location.reload();
-  // } else {
-  //   location.reload();
-  location.reload();
+var intervalID = window.setInterval(checkWeatherAPI, 1000);
 
+function checkWeatherAPI() {
+  // go check API
+  console.log("checking weather API");
   if (
     document.getElementsByTagName('h2').length == 0 &&
     document.getElementsByTagName('h3').length == 1
@@ -193,5 +216,3 @@ function getAnswer() {
     }
   }
 }
-
-getAnswer();
