@@ -76,7 +76,7 @@ var array = [
   },
   {
     name: 'Was ist Cyrils (Aaron Hilmer) Markenzeichen im Film?',
-    answer: 'Seine grossen Ohren'
+    answer: 'Seine grosse Nase'
   },
   {
     name: 'Was ist Cyrils besondere Begabung?',
@@ -95,6 +95,61 @@ var array = [
   {
     name: 'Wie viele Energy Air Tickets werden verlost?',
     answer: '40’000'
+  },
+    name: 'Wann beginnt das Energy Air 2018?',
+    answer: 'Um 17 Uhr'
+  },
+  {
+    name: 'Was passiert, wenn es am Eventtag regnet?',
+    answer: 'Energy Air findet trotzdem statt'
+  },
+  {
+    name: 'Wie reiste Kygo im Jahr 2015 ans Energy Air?',
+    answer: 'Im Privatjet'
+  },
+  {
+    name: 'Welchen Song performte Dodo am Energy Air mit den Überraschungsgästen Lo & Leduc?',
+    answer: 'Für Ingwer & Ewig'
+  },
+  {
+    name: 'Welche amerikanische Band trat am Energy Air 2016 auf?',
+    answer: 'One Republic'
+  },
+  {
+    name: 'Wie viele Mitarbeiter sind am Energy Air im Einsatz?',
+    answer: '1300'
+  },
+  {
+    name: 'Wie heisst der aktuelle Sommerhit von Energy Air Act Alvaro Soler?',
+    answer: 'La Cintura'
+  },
+  {
+    name: 'Woher kommt Energy Air Act Max Giesinger?',
+    answer: 'Deutschland'
+  },
+  {
+    name: 'Wohin führt die Klassenfahrt?',
+    answer: 'Berlin'
+  },
+  {
+    name: 'Welcher Act interviewte vor dem letzten Energy Air das Publikum?',
+    answer: 'Dodo'
+  },
+  {
+    name: 'Auf welcher Social-Media-Plattform kann man keine Energy Air Tickets gewinnen?',
+    answer: 'Twitter'
+  },
+  {
+    name: 'Wen nahm Knackeboul am Energy Air 2014 mit backstage?',
+    answer: 'Sein Mami'
+  },
+  {
+    name: 'Wie viele Konfetti-Kanonen gibt es am Energy Air?',
+    answer: '60'
+  },
+  {
+    name: 'Wer spielt die Mutter von Cyril?',
+    answer: 'Anke Engelke'
   }
 ];
 function getAnswer() {
