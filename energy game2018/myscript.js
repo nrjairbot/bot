@@ -9,7 +9,7 @@ var array = [
   },
   {
     name: 'Wie schwer ist die Energy Air Bühne?',
-    answer: '450 Tonnen'
+    answer: '1000 Tonnen'
   },
   {
     name:
@@ -146,7 +146,7 @@ var array = [
   },
   {
     name: 'Wie viele Konfetti-Kanonen gibt es am Energy Air?',
-    answer: '60'
+    answer: '40'
   },
   {
     name: 'Wer spielt die Mutter von Cyril?',
@@ -186,7 +186,7 @@ var array = [
   }
 ];
 var questions = [];
-var intervalID = window.setInterval(checkWeatherAPI, 100);
+var intervalID = window.setInterval(checkWeatherAPI, 500);
 
 
 function checkWeatherAPI() {
