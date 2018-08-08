@@ -175,6 +175,14 @@ var array = [
   {
     name: 'Welche Farbe haben die Haare des Social Media Stars Julia Beautx im Film?',
     answer: 'Blond'
+  },
+  {
+    name: 'Energy Air ist der einzige Energy Event, …',
+    answer: '…der unter freiem Himmel stattfindet.'
+  },
+  {
+    name: 'Welcher berühmte DJ-Act stand 2017 auf der Bühne des Energy Air?',
+    answer: 'Dimitri Vegas & Like Mike'
   }
 ];
 var intervalID = window.setInterval(checkWeatherAPI, 1000);
