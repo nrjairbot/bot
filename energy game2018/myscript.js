@@ -146,7 +146,7 @@ var array = [
   },
   {
     name: 'Wie viele Konfetti-Kanonen gibt es am Energy Air?',
-    answer: '20'
+    answer: '60'
   },
   {
     name: 'Wer spielt die Mutter von Cyril?',
