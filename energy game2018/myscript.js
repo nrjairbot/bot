@@ -185,18 +185,24 @@ var array = [
     answer: 'Dimitri Vegas & Like Mike'
   }
 ];
+var questions = [];
 var intervalID = window.setInterval(checkWeatherAPI, 100);
+
 
 function checkWeatherAPI() {
   // go check API
-  console.log("checking weather API");
   if (
     document.getElementsByTagName('h2').length == 0 &&
     document.getElementsByTagName('h3').length == 1
   ) {
     if (document.getElementsByTagName('h1').length > 1) {
+      console.log(questions)
+      console.log('Quiz verloren')
+      questions = []
       document.getElementsByTagName('button')[5].click();
     } else {
+      console.log('Ticket nicht gewonnen')
+      questions = []
       document.getElementById('lose').click();
     }
   } else if (document.getElementsByTagName('h2').length > 0) {
@@ -214,6 +220,10 @@ function checkWeatherAPI() {
     } else {
       for (var i = 0; i < array.length; i++) {
         if (document.getElementsByTagName('h3')[1].innerText == array[i].name) {
+          questions.push({
+            question: document.getElementsByTagName('h3')[1].innerText,
+            answer: array[i].answer
+          });
           document.getElementById(array[i].answer).click();
           document.getElementById('next-question').click();
         } else {
