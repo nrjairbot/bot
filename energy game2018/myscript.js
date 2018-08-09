@@ -190,45 +190,55 @@ var intervalID = window.setInterval(checkWeatherAPI, 500);
 
 
 function checkWeatherAPI() {
-  // go check API
-  if (
-    document.getElementsByTagName('h2').length == 0 &&
-    document.getElementsByTagName('h3').length == 1
-  ) {
-    if (document.getElementsByTagName('h1').length > 1) {
-      console.log(questions)
-      console.log('Quiz verloren')
-      questions = []
-      document.getElementsByTagName('button')[5].click();
-    } else {
-      console.log('Ticket nicht gewonnen')
-      questions = []
-      document.getElementById('lose').click();
-    }
-  } else if (document.getElementsByTagName('h2').length > 0) {
-    switch (document.getElementsByTagName('h2')[0].innerText) {
-      case 'Hinter welchem Logo verstecken sich die Tickets?':
-        document.getElementsByClassName('pulse')[5].click();
-        break;
-    }
-  } else if (document.getElementsByTagName('h3').length > 0) {
-    if (
-      document.getElementsByTagName('h3')[1].innerText ==
-      'Du hast die erste Hürde gepackt. Um welchen Preis möchtest du spielen?'
-    ) {
-      document.getElementsByTagName('button')[5].click();
-    } else {
-      for (var i = 0; i < array.length; i++) {
-        if (document.getElementsByTagName('h3')[1].innerText == array[i].name) {
-          questions.push({
-            question: document.getElementsByTagName('h3')[1].innerText,
-            answer: array[i].answer
-          });
-          document.getElementById(array[i].answer).click();
-          document.getElementById('next-question').click();
-        } else {
-        }
-      }
-    }
-  }
+	// go check API
+	console.log("checking weather API");
+	
+	try 
+	{
+		
+	if ( document.getElementsByTagName('h2').length == 0 &&
+		document.getElementsByTagName('h3').length == 1)
+	{
+		if (document.getElementsByTagName('h1').length > 1) 
+		{
+		  document.getElementsByTagName('button')[5].click();
+		} 
+		else 
+		{
+		  document.getElementById('lose').click();
+		}
+	} 
+	else if (document.getElementsByTagName('h2').length > 0) 
+	{
+		switch (document.getElementsByTagName('h2')[0].innerText) 
+		{
+			case 'Hinter welchem Logo verstecken sich die Tickets?':
+				document.getElementsByClassName('pulse')[5].click();
+				break;
+		}
+	} 
+	else if (document.getElementsByTagName('h3').length > 0) 
+	{
+		if (document.getElementsByTagName('h3')[1].innerText == 'Du hast die erste Hürde gepackt. Um welchen Preis möchtest du spielen?') 
+		{
+		  document.getElementsByTagName('button')[5].click();
+		} 
+		else 
+		{
+			for (var i = 0; i < array.length; i++) 
+			{
+				if (document.getElementsByTagName('h3')[1].innerText == array[i].name) 
+				{
+					document.getElementById(array[i].answer).click();
+					document.getElementById('next-question').click();
+				}
+			}
+		}
+	}
+	
+	}
+	catch(err)
+	{
+		location.reload();
+	}
 }
