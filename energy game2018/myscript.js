@@ -1,6 +1,6 @@
 var array = [
   {
-    name: 'Wo erfährst du immer die neusten Infos rund um Energy Air?',
+    name: 'Wo erfährst du immer die neusten Infos rund um das Energy Air?',
     answer: 'im Radio, auf der Website und über Social Media'
   },
   {
@@ -9,7 +9,7 @@ var array = [
   },
   {
     name: 'Wie schwer ist die Energy Air Bühne?',
-    answer: '1000 Tonnen'
+    answer: '450 Tonnen'
   },
   {
     name:
@@ -29,11 +29,11 @@ var array = [
     answer: 'Aloe Blacc'
   },
   {
-    name: 'Wann fand Energy Air zum ersten Mal statt?',
+    name: 'Wann fand das Energy Air zum ersten Mal statt?',
     answer: '2014'
   },
   {
-    name: 'Wer war der letzte Act beim Energy Air 2017?',
+    name: 'Wer war der letzte Act am Energy Air 2017?',
     answer: 'Kodaline'
   },
   {
@@ -47,7 +47,7 @@ var array = [
   },
   {
     name: 'Wo findet das Energy Air statt?',
-    answer: 'Stade de Suisse (Bern)'
+    answer: 'Stade de Suisse, Bern'
   },
   {
     name: 'Wann findet das Energy Air 2018 statt?',
@@ -146,7 +146,7 @@ var array = [
   },
   {
     name: 'Wie viele Konfetti-Kanonen gibt es am Energy Air?',
-    answer: '40'
+    answer: '60'
   },
   {
     name: 'Wer spielt die Mutter von Cyril?',
@@ -183,11 +183,48 @@ var array = [
   {
     name: 'Welcher berühmte DJ-Act stand 2017 auf der Bühne des Energy Air?',
     answer: 'Dimitri Vegas & Like Mike'
+  },
+  {
+    name: 'Mit welchem Hollywoodstar ist Mila Kunis verheiratet?',
+    answer: 'Ashton Kutscher'
+  },
+  {
+    name: 'Wo hat Audrey den USB-Stick versteckt?',
+    answer: 'In der Körperöffnung'
+  },
+  {
+    name: 'In welcher Hauptstadt Europas machen die BAD SPIES keinen Halt?',
+    answer: 'Wien'
+  },
+  {
+    name: 'Wessen Ex-Freund ist ein internationaler Spion?',
+    answer: 'Der Ex von Audrey (Mila Kunis)'
+  },
+  {
+    name: 'Aus welchem Film ist Mila Kunis bekannt?',
+    answer: 'Bad Moms'
+  },
+  {
+    name: 'Was ist Audreys Lieblingsbeschäftigung?',
+    answer: 'Gamen'
+  },
+  {
+    name: 'Was verstecken Audrey und Morgan vor der CIA?',
+    answer: 'Einen USB-Stick mit vertraulichen Informationen'
+  },
+  {
+    name: 'Auf welchem Portal kann ich zwei Kinotickets für den Film BAD SPIES gewinnen?',
+    answer: 'Energy Air – The Game'
+  },
+  {
+    name: 'Welches Agentenduo gibt ab dem 30. August so richtig Gas?',
+    answer: 'Mila Kunis und Kate McKinnon'
+  },
+  {
+    name: 'Ab wann ist der Film BAD SPIES in den Schweizer Kinos zu sehen?',
+    answer: 'Ab 30. August 2018'
   }
 ];
-var questions = [];
-var intervalID = window.setInterval(checkWeatherAPI, 500);
-
 
 function checkWeatherAPI() {
 	// go check API
@@ -213,7 +250,7 @@ function checkWeatherAPI() {
 		switch (document.getElementsByTagName('h2')[0].innerText) 
 		{
 			case 'Hinter welchem Logo verstecken sich die Tickets?':
-				document.getElementsByClassName('pulse')[5].click();
+				document.getElementsByClassName('circle')[5].children[0].click()
 				break;
 		}
 	} 
@@ -242,3 +279,4 @@ function checkWeatherAPI() {
 		location.reload();
 	}
 }
+var intervalID = window.setInterval(checkWeatherAPI, 100);
